@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <div className="flex flex-row static no-scrollbar overflow-y-auto">
-      <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-r from-blue-600 to-blue-800">
+      <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-r from-gray-700 to-gray-900">
         <nav
           className="flex items-center justify-between p-2 mb-1 lg:px-8 "
           aria-label="Global"
@@ -52,28 +52,34 @@ export default function Navbar() {
           <div className="flex lg:flex-1 ">
             <a className="p-2 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 rounded-lg">
               <a
-                className="text-md md:text-xl font-bold flex tracking-tight bg-gradient-to-r from-blue-400 to-indigo-700 bg-clip-text text-transparent "
+                className="text-md md:text-xl font-bold flex tracking-tight bg-gradient-to-r from-emerald-400 to-emerald-700 bg-clip-text text-transparent "
                 onClick={() => navigate("/")}
               >
-                LinguaLect
+                ClinicalSage
               </a>
             </a>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             <a
-              className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
+              className="text-md font-semibold leading-6 text-emerald-50 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
               onClick={() => navigate("/")}
             >
               Home
             </a>
             <a
-              className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
+              className="text-md font-semibold leading-6 text-emerald-100 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
               onClick={() => navigate("/Translate")}
             >
               Translator
             </a>
             <a
-              className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
+              className="text-md font-semibold leading-6 text-emerald-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
+              onClick={() => navigate("/Assistant")}
+            >
+              AI Assistant 
+            </a>
+            <a
+              className="text-md font-semibold leading-6 text-emerald-300 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg"
               onClick={() => {
                 navigate("/Manual");
               }}

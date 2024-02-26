@@ -6,7 +6,7 @@ import { marked } from "marked";
 
 const ChatMessage = ({ type, content }) => {
   const [transcription, setTranscription] = useState("");
-
+ 
   //workaround to double click get route
   const [count, setCount] = useState(0);
 
@@ -28,7 +28,7 @@ const ChatMessage = ({ type, content }) => {
   const [correctedText, setCorrectedText] = useState("");
 
   const mimeType = "audio/webm";
-  const ngrokurl = "https://9789-34-124-187-173.ngrok-free.app";
+  const ngrokurl = "https://9f9b-104-196-11-61.ngrok-free.app";
   //in built api reference
   const mediaRecorder = useRef(null);
 
@@ -152,17 +152,17 @@ const ChatMessage = ({ type, content }) => {
           type === "user" ? "justify-end" : "justify-start"
         } items-center ml-auto`}
       >
-        <button
+        {/* <button
           onClick={handleNER}
           className="bg-gradient-to-r from-pink-300 via-violet-300 to-purple-400 hover:bg-blue-700 text-white font-bold py-2 px-6 mx-2 rounded-full shadow-md focus:outline-none focus:shadow-outline flex items-center"
         >
           Route <span className="mlc-2">&#10132;</span>
-        </button>
+        </button> */}
         <div
           className={`flex flex-col ${
             type != "user" ? "items-end" : "items-start"
           } w-7/12 bg-${
-            type === "user" ? "blue-200" : "gray-300"
+            type === "user" ? "emerald-100" : "gray-300"
           } rounded-lg p-3`}
         >
           <h2 className="text-lg font-semibold">
@@ -170,14 +170,14 @@ const ChatMessage = ({ type, content }) => {
           </h2>
           <p className="text-sm">{content}</p>
         </div>
-        <div className="mx-1 p-5 rounded-full border-blue-200 border-4"></div>
+        {/* <div className="mx-1 p-5 rounded-full border-blue-200 border-4"></div> */}
       </div>
 
       <div className="flex flex-row justify-start items-center mr-auto pt-2 ml-1">
-        <div className="mx-1 p-5 rounded-full border-gray-300 border-4"></div>
+        {/* <div className="mx-1 p-5 rounded-full border-gray-300 border-4"></div> */}
         <div className="flex flex-col justify-start items-start w-7/12 bg-gray-300 rounded-lg p-3">
           <h2 className="text-lg font-semibold">
-            <i>Railway Mitra Chat🤖</i>
+            <i>Clinical Sage Chat</i>
           </h2>
           {loading ? (
             <Dna

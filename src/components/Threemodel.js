@@ -9,14 +9,18 @@ import {
 import CanvasLoader from "./Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./robot_playground/scene.gltf");
+  const computer = useGLTF("./lowpoly_medical_room/scene.gltf");
 
   return (
     <mesh>
-      <ambientLight intensity={0.5} color="blue" />
+      <ambientLight intensity={1} color="white" />
+      <pointLight position={[0, 10, -5]} intensity={100} color="white" />
+      <pointLight position={[0, -10, 5]} intensity={500} color="white" />
+      <pointLight position={[0, 10, 5]} intensity={500} color="white" />
+      <pointLight position={[0, -10, -5]} intensity={500} color="white" />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 3 : 1.2}
+        scale={isMobile ? 0.01 : 0.01}
         position={isMobile ? [0, -3, -0.5] : [0, 0, -0.5]}
         rotation={[0, Math.PI / 2, 0]} // Rotate around the center plane
       />
@@ -47,7 +51,7 @@ const Threemodel = () => {
       ref={canvasRef}
       shadows
       dpr={[1, 2]}
-      camera={{ position: isMobile ? [25, 0, 25] : [20, 3, 0], fov: 20 }}
+      camera={{ position: isMobile ? [25, 0, 25] : [20, 7, -15], fov: 20 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -61,7 +65,7 @@ const Threemodel = () => {
           minPolarAngle={Math.PI / 6} // Limit rotation angle from top view
           maxPolarAngle={Math.PI / 2.6} // Limit rotation angle from bottom view
           autoRotate
-          autoRotateSpeed={0.5} // Adjust auto-rotation speed
+          autoRotateSpeed={0} // Adjust auto-rotation speed
         />
         <Computers isMobile={isMobile} />
       </Suspense>

@@ -159,7 +159,7 @@ const TranslateMessage = ({ type, lang, srcLang, content }) => {
           className={`flex flex-col ${
             type != "user" ? "items-end" : "items-start"
           } w-7/12 bg-${
-            type === "user" ? "blue-200" : "gray-300"
+            type === "user" ? "emerald-100" : "gray-300"
           } rounded-lg p-3`}
         >
           <h2 className="text-lg font-semibold">
@@ -173,7 +173,7 @@ const TranslateMessage = ({ type, lang, srcLang, content }) => {
       <div className="flex flex-row justify-start items-center mr-auto pt-2 ml-1">
         {/* <div className="mx-1 p-5 rounded-full border-gray-300 border-4"></div> */}
         <div className="flex flex-col justify-start items-start w-7/12 bg-gray-300 rounded-lg p-3">
-          <h2 className="text-lg font-semibold">Railway Mitra Translation🤖</h2>
+          <h2 className="text-lg font-semibold">Clinical Sage Translation</h2>
           {loading ? (
             <Dna
               visible={true}
